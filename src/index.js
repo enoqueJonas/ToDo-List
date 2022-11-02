@@ -44,4 +44,4 @@ const populateTodo = () => {
   todoListUl.innerHTML = todoItems;
 };
 
-window.addEventListener('load', populateTodo());
+window.addEventListener('DOMContentLoaded', populateTodo());
