@@ -1,5 +1,6 @@
 import './index.css';
 import Icon from './more.png';
+import Refresh from './refresh.png'
 
 const todoListUl = document.querySelector('.todo-list');
 const todosArr = [
@@ -23,6 +24,7 @@ const todosArr = [
 const populateTodo = () => {
   let todoItems = ` <li class="todo-item todo-title">
             <h2> Today's To Do</h2>
+            <img src=${Refresh} alt="refresh" class="todo-hold">
     </li>
     <li class="todo-item todo-add">
         <input type="text" placeholder="Add to your list...">
@@ -33,7 +35,7 @@ const populateTodo = () => {
             <input type="checkbox">
             <p class="todo-text"> ${todo.description}</p>
         </div>
-        <img src="${Icon}" alt="" class="todo-hold">
+        <img src="${Icon}" alt="move" class="todo-hold">
         </li>`;
   });
   todoItems = `${todoItems} <li class="todo-item todo-button">

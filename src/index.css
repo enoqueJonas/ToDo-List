@@ -30,7 +30,7 @@ li {
 
 .todo-title {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   padding-left: 7px;
   width: 99%;
@@ -71,6 +71,7 @@ li {
 .todo-hold {
   width: 20px;
   height: 20px;
+  padding-right: 7px;
 }
 
 .todo-text {
