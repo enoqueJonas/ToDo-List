@@ -1,6 +1,6 @@
 import './index.css';
 import Icon from './more.png';
-import Refresh from './refresh.png'
+import Refresh from './refresh.png';
 
 const todoListUl = document.querySelector('.todo-list');
 const todosArr = [
