@@ -1,94 +1,94 @@
 body {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 .wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 45em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45em;
 }
 
 .todo-list {
-    display: flex;
-    flex-direction: column;
-    width: 34em;
-    min-height: 18em;
-    padding: 0;
-    box-shadow: 1px 1px 1px 1px black;
+  display: flex;
+  flex-direction: column;
+  width: 34em;
+  min-height: 18em;
+  padding: 0;
+  box-shadow: 1px 1px 1px 1px black;
 }
 
 .todo-item {
-    border: 0.5px solid rgba(0, 0, 0, .2);
-    width: 100%;
-    height: 60px;
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 60px;
 }
 
 .todo-title {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding-left: 7px;
-    width: 99%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 7px;
+  width: 99%;
 }
 
-.todo-title h2{
-    color: rgba(0, 0, 0, .6);
+.todo-title h2 {
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .todo-add {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
-.todo-add input{
-    height: 50px;
-    width: 98%;
-    border: 1px solid #fff;
-    padding-left: 7px;
+.todo-add input {
+  height: 50px;
+  width: 98%;
+  border: 1px solid #fff;
+  padding-left: 7px;
 }
 
 .todos {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .todo-wrap {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    width: 90%;
-    height: 50px;
-    padding-left: 7px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 90%;
+  height: 50px;
+  padding-left: 7px;
 }
 
 .todo-hold {
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
 }
 
 .todo-text {
-    padding-left: 7px;
+  padding-left: 7px;
 }
 
 .todo-button {
-    width: 99.9%;
-    margin: 0;
+  width: 99.9%;
+  margin: 0;
 }
 
 .todo-button button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    width: 100%;
-    height: 50px;
-    background-color: #fff;
-    border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  border: none;
 }
