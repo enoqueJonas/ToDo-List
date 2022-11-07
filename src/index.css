@@ -6,8 +6,14 @@ li {
   list-style: none;
 }
 
+form {
+  width: 34em;
+  box-shadow: 1px 0 0 1px black;
+}
+
 .wrapper {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 45em;
@@ -17,9 +23,10 @@ li {
   display: flex;
   flex-direction: column;
   width: 34em;
-  min-height: 18em;
+  min-height: 4em;
   padding: 0;
   box-shadow: 1px 1px 1px 1px black;
+  margin: 0;
 }
 
 .todo-item {
@@ -63,6 +70,7 @@ li {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  align-items: center;
   width: 90%;
   height: 50px;
   padding-left: 7px;
@@ -76,6 +84,7 @@ li {
 
 .todo-text {
   padding-left: 7px;
+  border: none;
 }
 
 .todo-button {

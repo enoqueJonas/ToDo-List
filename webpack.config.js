@@ -5,6 +5,9 @@ module.exports = {
   entry: './src/index.js',
   mode: 'production',
   devServer: {
+    client: {
+      webSocketURL: 'http://127.0.0.1:8080',
+    },
     static: './dist',
   },
   output: {
