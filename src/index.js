@@ -12,6 +12,30 @@ const refresImg = document.querySelector('#refresh');
 const todoListUl = document.querySelector('.todo-list');
 const btnAddTodo = document.querySelector('#btn-add-todo');
 
+const populateTodo = () => {
+  let todoItems = '';
+  refresImg.src = Refresh;
+  btnAddTodo.src = Add;
+  const storageTasks = JSON.parse(localStorage.getItem('todos'));
+  if (storageTasks !== null) {
+    storageTasks.forEach((todo, index) => {
+      todoItems = `${todoItems} <li class="todo-item todos">
+          <div class="todo-wrap">
+              <input type="checkbox">
+              <input id="todo-${index + 1}" type="text" class="todo-text" value="${todo.description}">
+          </div>
+          <img src="${Edit}" id="edit-${index + 1}" alt="edit" class="edit-btn todo-hold">
+          <img src="${Remove}" id="${index + 1}" alt="edit" class="remove-btn todo-hold">
+          <img src="${Icon}" alt="move" class="todo-hold">
+          </li>`;
+    });
+  }
+  todoItems = `${todoItems} <li class="todo-item todo-button">
+      <button id="btn-clear">Clear all completed</button>
+  </li>`;
+  todoListUl.innerHTML = todoItems;
+};
+
 const removeTodo = (event) => {
   const btnId = Number(event.target.id);
   tasksArr.splice(btnId - 1, 1);
@@ -61,32 +85,6 @@ const addEditEvents = () => {
   });
 };
 
-const populateTodo = () => {
-  let todoItems = '';
-  refresImg.src = Refresh;
-  btnAddTodo.src = Add;
-  const storageTasks = JSON.parse(localStorage.getItem('todos'));
-  if (storageTasks !== null) {
-    storageTasks.forEach((todo, index) => {
-      todoItems = `${todoItems} <li class="todo-item todos">
-        <div class="todo-wrap">
-            <input type="checkbox">
-            <input id="todo-${index + 1}" type="text" class="todo-text" value="${todo.description}">
-        </div>
-        <img src="${Edit}" id="edit-${index + 1}" alt="edit" class="edit-btn todo-hold">
-        <img src="${Remove}" id="${index + 1}" alt="edit" class="remove-btn todo-hold">
-        <img src="${Icon}" alt="move" class="todo-hold">
-        </li>`;
-    });
-  }
-  todoItems = `${todoItems} <li class="todo-item todo-button">
-    <button id="btn-clear">Clear all completed</button>
-</li>`;
-  todoListUl.innerHTML = todoItems;
-  addDeleteEvents();
-  addEditEvents();
-};
-
 const addTodo = () => {
   const todotext = todoAddInput.value;
   const todo = new Todo(todotext, false, tasksArr.length + 1);
@@ -97,4 +95,6 @@ const addTodo = () => {
 };
 
 window.onload = populateTodo();
+window.onload = addDeleteEvents();
+window.onload = addEditEvents();
 btnAddTodo.addEventListener('click', addTodo);

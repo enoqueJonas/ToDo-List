@@ -7,8 +7,8 @@ li {
 }
 
 form {
-    width: 34em;
-    box-shadow: 1px 0px 0px 1px black;
+  width: 34em;
+  box-shadow: 1px 0 0 1px black;
 }
 
 .wrapper {
@@ -25,7 +25,7 @@ form {
   width: 34em;
   min-height: 4em;
   padding: 0;
-  box-shadow:1px 1px 1px 1px black;
+  box-shadow: 1px 1px 1px 1px black;
   margin: 0;
 }
 
