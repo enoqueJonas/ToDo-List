@@ -26,6 +26,7 @@ const updateTasks = (event) => {
       task.completed = false;
     }
   });
+  localStorage.setItem('todos', JSON.stringify(tasksArr));
 };
 
 const populateTodo = () => {
@@ -35,7 +36,18 @@ const populateTodo = () => {
   const storageTasks = JSON.parse(localStorage.getItem('todos')) || [];
   if (tasksArr !== null) {
     storageTasks.forEach((todo, index) => {
-      todoItems = `${todoItems} <li class="todo-item todos">
+      if (todo.completed) {
+        todoItems = `${todoItems} <li class="todo-item todos">
+          <div class="todo-wrap">
+              <input id="check-${index + 1}" class="checkboxes" type="checkbox" checked>
+              <input id="todo-${index + 1}" type="text" class="todo-text" value="${todo.description}">
+          </div>
+          <img src="${Edit}" id="edit-${index + 1}" alt="edit" class="edit-btn todo-hold">
+          <img src="${Remove}" id="${index + 1}" alt="edit" class="remove-btn todo-hold">
+          <img src="${Icon}" alt="move" class="todo-hold">
+          </li>`;
+      } else {
+        todoItems = `${todoItems} <li class="todo-item todos">
           <div class="todo-wrap">
               <input id="check-${index + 1}" class="checkboxes" type="checkbox">
               <input id="todo-${index + 1}" type="text" class="todo-text" value="${todo.description}">
@@ -44,6 +56,7 @@ const populateTodo = () => {
           <img src="${Remove}" id="${index + 1}" alt="edit" class="remove-btn todo-hold">
           <img src="${Icon}" alt="move" class="todo-hold">
           </li>`;
+      }
     });
   }
   todoItems = `${todoItems} <li class="todo-item todo-button">
