@@ -22,7 +22,7 @@ const updateTasks = (event) => {
   tasksArr.forEach((task) => {
     if (editId === task.index && event.target.checked === true) {
       task.completed = true;
-    } else if(editId === task.index && event.target.checked !== true){
+    } else if (editId === task.index && event.target.checked !== true) {
       task.completed = false;
     }
   });
@@ -51,21 +51,15 @@ const populateTodo = () => {
   </li>`;
   todoListUl.innerHTML = todoItems;
   addCompletedEvents(updateTasks);
-  addBtnClearEvent();
-};
-
-const addBtnClearEvent = () => {
-    const btnClear = document.querySelector('#btn-clear');
-    btnClear.addEventListener('click', clearCompleted);
-  };
-
-const clearCompleted = () => {
-  const filteredTasks = tasksArr.filter((task) => task.completed === false);
-  filteredTasks.forEach((task, index) => {
-    task.index = index + 1;
+  const btnClear = document.querySelector('#btn-clear');
+  btnClear.addEventListener('click', () => {
+    const filteredTasks = tasksArr.filter((task) => task.completed === false);
+    filteredTasks.forEach((task, index) => {
+      task.index = index + 1;
+    });
+    localStorage.setItem('todos', JSON.stringify(filteredTasks));
+    populateTodo();
   });
-  localStorage.setItem('todos', JSON.stringify(filteredTasks));
-  populateTodo();
 };
 
 const removeTodo = (event) => {
@@ -108,7 +102,7 @@ editTodo = (event) => {
 const addTodo = () => {
   const todotext = todoAddInput.value;
   const storageTasks = JSON.parse(localStorage.getItem('todos'));
-  if(tasksArr !== []){
+  if (tasksArr !== []) {
     tasksArr.splice(0, tasksArr.length, ...storageTasks);
   }
   const todo = new Todo(todotext, false, tasksArr.length + 1);
