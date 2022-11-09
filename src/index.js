@@ -51,7 +51,7 @@ const populateTodo = () => {
   </li>`;
   todoListUl.innerHTML = todoItems;
   addCompletedEvents(updateTasks);
-  
+
   const btnClear = document.querySelector('#btn-clear');
   btnClear.addEventListener('click', () => {
     const filteredTasks = tasksArr.filter((task) => task.completed === false);
