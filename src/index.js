@@ -103,7 +103,7 @@ editTodo = (event) => {
 const addTodo = () => {
   const todotext = todoAddInput.value;
   const storageTasks = JSON.parse(localStorage.getItem('todos'));
-  if (tasksArr !== []) {
+  if (tasksArr !== [] && storageTasks !== null) {
     tasksArr.splice(0, tasksArr.length, ...storageTasks);
   }
   const todo = new Todo(todotext, false, tasksArr.length + 1);
