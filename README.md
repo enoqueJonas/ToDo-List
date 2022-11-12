@@ -12,7 +12,7 @@
 - JavaScript
 
 ## Live Demo
-[Click Here](https://github.com/enoqueJonas/ToDo-List)
+[Click Here](https://enoquejonas.github.io/dist/)
 
 ## Getting Started
 
