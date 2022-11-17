@@ -136,3 +136,4 @@ const loadPage = () => {
 
 window.onload = loadPage();
 btnAddTodo.addEventListener('click', addTodo);
+
