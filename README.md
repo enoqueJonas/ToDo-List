@@ -30,6 +30,16 @@
 - Twitter: [@enoque_jonas](https://twitter.com/enoque_jonas)
 - LinkedIn: [@Enoque Macanda](https://www.linkedin.com/mwlite/in/enoque-macanda) 
 
+👤 **Jesus Molina**
+
+- GitHub: [@Sparktan24](https://github.com/Sparktan24)
+- Twitter: [@Sparktan1](https://twitter.com/Sparktan1)
+- LinkedIn: [Jesus Molina](https://www.linkedin.com/in/jesus-molina-2b104424a/)
+
+👤 **Arkan Kovan Abdullah**
+
+- GitHub: [@ArkanKovanAbdullah](https://github.com/ArkanKovanAbdullah)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome.
