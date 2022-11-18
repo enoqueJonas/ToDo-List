@@ -32,11 +32,13 @@ describe('Updates', () => {
     localStorage.setItem('todos', JSON.stringify(result));
     expect(JSON.parse(localStorage.getItem('todos'))).toEqual(result);
     document.body.innerHTML = '';
-    for (let i = 0; i < result.length; i += 1) {
-      document.body.innerHTML += '<div class="works">'
-                + '  <ul id="list"><li></li></ul>'
-                + '</div>';
-    }
+    result.forEach(() => {
+      document.body.innerHTML += `
+      <div class="works">
+        <ul id="list"><li></li></ul>
+      </div>
+      `;
+    });
     const list = document.querySelectorAll('.works');
     expect(list).toHaveLength(result.length);
   });
@@ -70,11 +72,14 @@ describe('Updates', () => {
     localStorage.setItem('todos', JSON.stringify(result));
     expect(JSON.parse(localStorage.getItem('todos'))).toEqual(result);
     document.body.innerHTML = '';
-    for (let i = 0; i < result.length; i += 1) {
-      document.body.innerHTML += '<div class="works">'
-                + '  <ul id="list"><li></li></ul>'
-                + '</div>';
-    }
+    result.forEach(() => {
+      document.body.innerHTML += `
+      <div class="works">
+        <ul id="list"><li></li></ul>
+      </div>
+      `;
+    });
+
     const list = document.querySelectorAll('.works');
     expect(list).toHaveLength(result.length);
   });
@@ -102,11 +107,13 @@ describe('Updates', () => {
     localStorage.setItem('todos', JSON.stringify(result));
     expect(JSON.parse(localStorage.getItem('todos'))).toEqual(result);
     document.body.innerHTML = '';
-    for (let i = 0; i < result.length; i += 1) {
-      document.body.innerHTML += '<div class="works">'
-                + '  <ul id="list"><li></li></ul>'
-                + '</div>';
-    }
+    result.forEach(() => {
+      document.body.innerHTML += `
+      <div class="works">
+        <ul id="list"><li></li></ul>
+      </div>
+      `;
+    });
     const list = document.querySelectorAll('.works');
     expect(list).toHaveLength(result.length);
   });
